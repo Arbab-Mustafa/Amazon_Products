@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import products from "../data"; // Make sure this points to your products data file
 import { useEffect, useState, useRef } from "react";
 import Header from "./Header";
+import Footer from "./Footer";
+import NotFound from "./NotFound";
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -9,16 +11,26 @@ const ProductDetails = () => {
   const [mainImage, setMainImage] = useState("");
   const [isZoomed, setIsZoomed] = useState(false); // Start with no zoom
   const [zoomPosition, setZoomPosition] = useState({ x: 0, y: 0 }); // Mouse position tracking
+  const [productNotFound, setProductNotFound] = useState(false);
 
   const zoomRef = useRef(null); // Ref for the zoom container
 
   useEffect(() => {
     const foundProduct = products.find((p) => p.id === id);
-    setProduct(foundProduct);
     if (foundProduct) setMainImage(foundProduct.Images[0]); // Set initial main image
+    if (foundProduct) {
+      setProduct(foundProduct);
+      setProductNotFound(false); // Reset the not found state if product is found
+    } else {
+      setProductNotFound(true); // Set not found state to true if product is not found
+    }
   }, [id]);
 
-  if (!product) return <p>Loading product details...</p>;
+  if (productNotFound) return <NotFound />;
+  if (!product)
+    return (
+      <p className="flex justify-center items-center h-screen">Loading ...</p>
+    );
 
   const toggleZoom = () => {
     setIsZoomed((prev) => !prev); // Toggle zoom state
@@ -189,6 +201,8 @@ const ProductDetails = () => {
           </p>
         ))}
       </div>
+
+      <Footer />
     </>
   );
 };
