@@ -14,8 +14,7 @@ const products = [
     Heat_Output: "5100 British Thermal Units",
     Special_Feature: "Led Flame",
     Style: "Classic",
-    // Room_Type: "",
-    // Ventilation_Type: "",
+
     detail: [
       [
         "Vintage Fireplace:Classic retro style,original medieval church gate design, Strong Steel Structure. When the cold sets in, there no better feelithan relaxing by your fireplace, whose efficient 5,100 BTU heat output keeps you warm all winter.",
