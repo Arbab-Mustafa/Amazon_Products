@@ -53,12 +53,12 @@ const ProductDetails = () => {
     <>
       <Header />
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-4 md:p-8">
         {/* Left Side: Image Gallery */}
         <div className="space-y-4">
           <div
             ref={zoomRef}
-            className={`relative border rounded-lg overflow-hidden w-[48vh] h-[50vh]  mx-auto md:w-[90vh]  md:h-[80vh]  ${
+            className={`relative border rounded-lg overflow-hidden w-[36vh] h-[40vh] sm:w-[48vh] sm:h-[50vh] mx-auto md:w-[90vh]  md:h-[80vh]  ${
               isZoomed ? "cursor-zoom-out" : "cursor-zoom-in"
             }`}
             onClick={toggleZoom}
@@ -89,7 +89,7 @@ const ProductDetails = () => {
           </div>
 
           {/* Thumbnails */}
-          <div className="flex  gap-1 w-[43vh] sm:w-auto overflow-x-auto scrollbar-hide">
+          <div className="flex  gap-1  w-[43vh] sm:w-auto overflow-x-auto scrollbar-hide">
             {product.Images.map((img, index) => (
               <img
                 key={index}
