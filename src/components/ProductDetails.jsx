@@ -89,7 +89,7 @@ const ProductDetails = () => {
           </div>
 
           {/* Thumbnails */}
-          <div className="flex  gap-1 md:w-[43vh] sm:w-auto overflow-x-auto scrollbar-hide">
+          <div className="flex  gap-0 md:w-[43vh] sm:w-auto overflow-x-auto scrollbar-hide">
             {product.Images.map((img, index) => (
               <img
                 key={index}
