@@ -68,7 +68,7 @@ const ProductDetails = () => {
             <img
               src={mainImage}
               alt={product.Title}
-              className={`w-full h-full  object-contain transition-transform duration-300 ease-in-out ${
+              className={`w-full   object-contain transition-transform duration-300 ease-in-out ${
                 isZoomed ? "scale-150" : "scale-100" // Conditional scaling
               }`}
               style={
