@@ -1,16 +1,15 @@
-import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import ProductListing from "../components/ProductGrid";
 
-const Home = () => {
+const Products = () => {
   return (
-    <div className="bg-[#F2F3FA]">
+    <div>
       <Header />
-      <Banner />
-
+      <ProductListing />
       <Footer />
     </div>
   );
 };
 
-export default Home;
+export default Products;

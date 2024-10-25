@@ -8,7 +8,7 @@ const ProductListing = () => {
         Our Products
       </h2>
       <div className="w-full  max-w-7xl   mx-auto flex justify-center">
-        <div className=" flex justify-center flex-wrap gap-4    bg-[#F2F3FA]">
+        <div className=" flex justify-center flex-wrap gap-4    ">
           {products.map((product) => (
             <ProductCard key={product.id} product={product} />
           ))}

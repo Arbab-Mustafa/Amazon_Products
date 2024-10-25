@@ -89,7 +89,7 @@ const ProductDetails = () => {
           </div>
 
           {/* Thumbnails */}
-          <div className="flex  gap-1 md:w-[43vh] sm:w-auto overflow-x-auto scrollbar-hide">
+          <div className="flex  gap-1 md:w-[95%] max-w-7xl sm:w-auto overflow-x-auto md:overflow-hidden scrollbar-hide">
             {product.Images.map((img, index) => (
               <img
                 key={index}
@@ -105,7 +105,7 @@ const ProductDetails = () => {
         </div>
 
         {/* Right Side: Product Details */}
-        <div className="space-y-6">
+        <div className="space-y-6  ">
           <h1 className="text-2xl md:text-4xl font-bold">{product.Title}</h1>
           {/* 1 */}
           <div className="flex gap-2 *: items-center">
