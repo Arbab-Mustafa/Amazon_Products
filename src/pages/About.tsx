@@ -1,11 +1,14 @@
 import React from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
+import AboutUs from "../components/AboutUs";
 
 const About = () => {
   return (
-    <div>
+    <div className="bg-[#F2F3FA]">
       <Header />
-      <h1>About</h1>
+      <AboutUs />
+      <Footer />
     </div>
   );
 };
