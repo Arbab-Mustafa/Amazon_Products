@@ -4,7 +4,7 @@ import Header from "../components/Header";
 
 const Home = () => {
   return (
-    <div className="bg-[#F2F3FA] h-screen">
+    <div className="bg-[#F2F3FA]">
       <Header />
       <Banner />
 
