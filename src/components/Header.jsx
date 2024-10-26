@@ -21,12 +21,6 @@ const Header = () => {
             >
               About
             </Link>
-            <Link
-              to="/product"
-              className="text-sm font-semibold text-[#1D1F45] hover:text-[#6369D2]"
-            >
-              Products
-            </Link>
           </nav>
         </div>
       </div>
